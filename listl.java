@@ -1,6 +1,5 @@
 public class listl{
-
-    class node{
+     class node{                // creating node
         int data;
         node next;
         
@@ -11,7 +10,7 @@ public class listl{
     }
     
     node head;
-    public void first(int data, int index){
+    public void first(int data, int index){              //inserting node and data 
         node newnode=new node(data);
         if(index==0){
             newnode.next=head;
@@ -34,14 +33,14 @@ public class listl{
 
 
 
-    public void delete(int data){
+    public void delete(int data){           //delete from the begining
         if(head==null){
             System.out.println("list is empty");
         }
         head=head.next;
     }
 
-    public void deleteend(int data){
+    public void deleteend(int data){              //deleting from end
         if(head==null){
             System.out.println("empty");
             return;
@@ -57,7 +56,7 @@ public class listl{
         }
         temp.next=null;
     }
-    public void display(){
+    public void display(){                          //end
         node temp=head;
         while(temp!=null){
             System.out.print(temp.data +"->");
